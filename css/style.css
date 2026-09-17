@@ -1,0 +1,84 @@
+/* Base Stylesheet - Cricket Academy Management System */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --accent-green: #10b981;
+  --accent-green-hover: #059669;
+  --accent-green-glow: rgba(16, 185, 129, 0.25);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --status-pending: #f59e0b;
+  --status-approved: #10b981;
+  --status-cancelled: #ef4444;
+  --status-present: #10b981;
+  --status-absent: #ef4444;
+  --border-color: #334155;
+  --border-light: rgba(255,255,255,0.05);
+  --font-main: 'Outfit', sans-serif;
+  --sidebar-width: 260px;
+  --transition: 0.25s ease;
+  --radius: 12px;
+  --shadow: 0 10px 15px -3px rgba(0,0,0,0.3), 0 4px 6px -4px rgba(0,0,0,0.3);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:var(--font-main); background:var(--bg-primary); color:var(--text-primary); line-height:1.5; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+::-webkit-scrollbar { width:7px; height:7px; }
+::-webkit-scrollbar-track { background:var(--bg-primary); }
+::-webkit-scrollbar-thumb { background:var(--bg-tertiary); border-radius:4px; }
+
+a { color:var(--accent-green); text-decoration:none; transition:color var(--transition); }
+a:hover { color:var(--accent-green-hover); }
+button, input, select, textarea { font-family:inherit; font-size:inherit; }
+
+/* Buttons */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 20px; border-radius:var(--radius); font-weight:600; cursor:pointer; transition:all var(--transition); border:none; text-decoration:none; }
+.btn-primary { background:var(--accent-green); color:#fff; }
+.btn-primary:hover { background:var(--accent-green-hover); box-shadow:0 0 18px var(--accent-green-glow); transform:translateY(-1px); color:#fff; }
+.btn-secondary { background:var(--bg-tertiary); color:var(--text-primary); }
+.btn-secondary:hover { background:#475569; transform:translateY(-1px); }
+.btn-danger { background:var(--status-cancelled); color:#fff; }
+.btn-danger:hover { background:#dc2626; transform:translateY(-1px); }
+.btn-outline { background:transparent; border:1px solid var(--border-color); color:var(--text-secondary); }
+.btn-outline:hover { border-color:var(--accent-green); color:var(--text-primary); background:rgba(16,185,129,0.05); }
+.btn-logout { background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); color:#fca5a5; width:100%; justify-content:center; text-decoration:none; padding:10px 20px; border-radius:var(--radius); font-weight:600; cursor:pointer; transition:all var(--transition); display:inline-flex; align-items:center; gap:8px; }
+.btn-logout:hover { background:rgba(239,68,68,0.2); color:#ff6b6b; }
+
+/* Form Controls */
+.form-control { width:100%; background:rgba(15,23,42,0.6); border:1px solid var(--border-color); padding:10px 14px; border-radius:var(--radius); color:#fff; outline:none; transition:all var(--transition); }
+.form-control:focus { border-color:var(--accent-green); box-shadow:0 0 0 2px var(--accent-green-glow); }
+.form-control option { background:var(--bg-secondary); color:#fff; }
+textarea.form-control { resize:vertical; }
+select.form-control { cursor:pointer; }
+input[type="date"].form-control { color-scheme:dark; }
+
+/* Utilities */
+.text-center { text-align:center; }
+.flex { display:flex; }
+.justify-between { justify-content:space-between; }
+.align-center { align-items:center; }
+.gap-10 { gap:10px; }
+.gap-20 { gap:20px; }
+.mt-20 { margin-top:20px; }
+.mb-20 { margin-bottom:20px; }
+.hidden { display:none !important; }
+
+/* Status Badges */
+.badge { display:inline-flex; padding:4px 10px; border-radius:9999px; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; }
+.badge-pending { background:rgba(245,158,11,0.15); color:var(--status-pending); }
+.badge-approved { background:rgba(16,185,129,0.15); color:var(--status-approved); }
+.badge-cancelled { background:rgba(239,68,68,0.15); color:var(--status-cancelled); }
+.badge-present { background:rgba(16,185,129,0.15); color:var(--status-present); }
+.badge-absent { background:rgba(239,68,68,0.15); color:var(--status-absent); }
+.badge-outline { background:var(--bg-tertiary); color:var(--text-secondary); }
+
+/* Btn Icon */
+.btn-icon { width:32px; height:32px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--border-color); background:var(--bg-primary); color:var(--text-secondary); cursor:pointer; transition:all var(--transition); font-size:0.85rem; }
+.btn-icon:hover { border-color:var(--accent-green); color:var(--accent-green); }
+.btn-icon-danger:hover { border-color:var(--status-cancelled); color:var(--status-cancelled); }
+.action-buttons { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }

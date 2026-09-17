@@ -1,0 +1,49 @@
+/* Auth / Login Page Styles */
+.auth-container {
+  display:flex; align-items:center; justify-content:center;
+  min-height:100vh; padding:20px;
+  background: linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(6,40,24,0.8) 100%),
+    url('../img/bg.jpg') no-repeat center center/cover;
+}
+.auth-card {
+  width:100%; max-width:460px;
+  background:rgba(30,41,59,0.8);
+  backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px; padding:42px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.5);
+  animation:fadeInUp 0.5s ease-out;
+}
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(24px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.auth-logo { text-align:center; margin-bottom:32px; }
+.logo-icon { font-size:3rem; margin-bottom:8px; }
+.auth-logo h1 { font-size:2rem; font-weight:800; color:#fff; letter-spacing:-0.03em; }
+.auth-logo h1 span { color:var(--accent-green); }
+.auth-logo p { color:var(--text-secondary); font-size:0.9rem; margin-top:4px; }
+.auth-logo small { color:var(--text-muted); font-size:0.78rem; }
+.form-group { margin-bottom:18px; }
+.form-group label { display:block; font-weight:500; margin-bottom:6px; color:var(--text-primary); font-size:0.9rem; }
+.auth-error {
+  background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.4);
+  color:#fca5a5; padding:12px 16px; border-radius:var(--radius);
+  font-size:0.85rem; margin-bottom:18px;
+  animation:shake 0.3s ease;
+}
+@keyframes shake {
+  0%,100% { transform:translateX(0); }
+  25% { transform:translateX(-5px); }
+  75% { transform:translateX(5px); }
+}
+.info-box {
+  background:rgba(16,185,129,0.06); border:1px dashed rgba(16,185,129,0.25);
+  padding:14px 16px; border-radius:var(--radius); margin-top:22px; font-size:0.8rem;
+  color:var(--text-secondary);
+}
+.info-box h4 { color:var(--accent-green); margin-bottom:8px; font-size:0.85rem; }
+.info-box ul { list-style:none; padding:0; }
+.info-box li { margin-bottom:4px; }
+.info-box code { background:var(--bg-primary); padding:2px 6px; border-radius:4px; color:#fff; font-size:0.85em; }
+.auth-footer { text-align:center; margin-top:20px; font-size:0.8rem; color:var(--text-muted); }
